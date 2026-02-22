@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeVegan • Manajemen Toko</title>
+
+  <!-- Google Fonts (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR MODERN (GLASS) -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top glass-nav">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-flower2 text-success me-2"></i>BeVegan
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produk.html">Produk</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero d-flex align-items-center text-center text-white">
+  <div class="container">
+    <h1 class="display-4 fw-bold animate-fade-in">BeVegan <br> Sayur & Buah Sehat</h1>
+    <p class="lead mb-4">Sistem manajemen stok, penjualan, dan produk dalam satu platform.</p>
+    <a href="#produk" class="btn btn-light btn-lg rounded-pill px-5 me-2 shadow-sm">Lihat Produk</a>
+    <a href="#form" class="btn btn-outline-light btn-lg rounded-pill px-5">Tambah Produk</a>
+  </div>
+</section>
+
+<!-- STATISTIK CARD -->
+<section class="container my-5 py-4">
+  <div class="row g-4 text-center">
+    <div class="col-md-4">
+      <div class="card-glass h-100 p-3">
+        <i class="bi bi-box-seam display-3 text-success mb-3"></i>
+        <h5 class="fw-semibold">Total Produk</h5>
+        <h2 class="fw-bold">25</h2>
+        <small class="text-muted">+3 dari bulan lalu</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-glass h-100 p-3">
+        <i class="bi bi-basket display-3 text-success mb-3"></i>
+        <h5 class="fw-semibold">Stok Tersedia</h5>
+        <h2 class="fw-bold">120</h2>
+        <small class="text-muted">kg / item</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-glass h-100 p-3">
+        <i class="bi bi-cart-check display-3 text-success mb-3"></i>
+        <h5 class="fw-semibold">Penjualan</h5>
+        <h2 class="fw-bold">75</h2>
+        <small class="text-muted">transaksi bulan ini</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW PRODUK (CAROUSEL) -->
+<section id="produk" class="container my-5 py-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold">🍏 Produk Terbaru</h2>
+    <a href="produk.html" class="btn btn-outline-success rounded-pill">Lihat Semua <i class="bi bi-arrow-right"></i></a>
+  </div>
+  
+  <!-- CAROUSEL -->
+  <div id="carouselProduk" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-produk">
+              <img src="assets/bayam.jpg" alt="Bayam" class="product-img">
+              <h5 class="fw-semibold mt-3">Bayam</h5>
+              <p class="text-muted">Rp 5.000 / ikat</p>
+              <span class="badge bg-success-soft">Stok 20</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-produk">
+              <img src="assets/wortel.jpg" alt="Wortel" class="product-img">
+              <h5 class="fw-semibold mt-3">Wortel</h5>
+              <p class="text-muted">Rp 8.000 / kg</p>
+              <span class="badge bg-success-soft">Stok 35</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-produk">
+              <img src="assets/apel.jpg" alt="Apel" class="product-img">
+              <h5 class="fw-semibold mt-3">Apel</h5>
+              <p class="text-muted">Rp 15.000 / kg</p>
+              <span class="badge bg-success-soft">Stok 12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-produk">
+              <img src="assets/brokoli.jpg" alt="Brokoli" class="product-img">
+              <h5 class="fw-semibold mt-3">Brokoli</h5>
+              <p class="text-muted">Rp 12.000 / kg</p>
+              <span class="badge bg-success-soft">Stok 8</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-produk">
+              <img src="assets/jeruk.jpg" alt="Jeruk" class="product-img">
+              <h5 class="fw-semibold mt-3">Jeruk</h5>
+              <p class="text-muted">Rp 20.000 / kg</p>
+              <span class="badge bg-success-soft">Stok 15</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-produk">
+              <img src="assets/tahu.jpg" alt="Tahu" class="product-img">
+              <h5 class="fw-semibold mt-3">Tahu</h5>
+              <p class="text-muted">Rp 3.000 / potong</p>
+              <span class="badge bg-success-soft">Stok 40</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduk" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselProduk" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselProduk" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselProduk" data-bs-slide-to="1"></button>
+    </div>
+  </div>
+</section>
+
+<!-- FORM INPUT (FLOATING LABEL) -->
+<section id="form" class="container my-5 py-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card-form p-4">
+        <h2 class="fw-bold text-center mb-4">➕ Tambah Produk Baru</h2>
+        <form id="formTambahProduk" enctype="multipart/form-data">
+          <!-- Upload Gambar -->
+          <div class="mb-4">
+            <label for="fotoProduk" class="form-label fw-semibold">Upload Foto Produk</label>
+            <div class="upload-wrapper">
+              <input type="file" class="form-control form-control-lg" id="fotoProduk" accept="image/*" required>
+              <small class="text-muted d-block mt-2">Format: JPG, PNG, JPEG (Max 5MB)</small>
+            </div>
+            <div id="previewContainer" class="mt-3" style="display:none;">
+              <img id="previewImage" src="" alt="Preview" class="img-preview">
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="namaProduk" placeholder="Nama Produk" required>
+            <label for="namaProduk">Nama Produk</label>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <select class="form-select" id="jenisProduk" required>
+                  <option selected disabled value="">Pilih</option>
+                  <option>Sayur</option>
+                  <option>Buah</option>
+                </select>
+                <label for="jenisProduk">Jenis Produk</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <select class="form-select" id="satuan" required>
+                  <option selected disabled value="">Pilih</option>
+                  <option>kg</option>
+                  <option>potong</option>
+                  <option>ikat</option>
+                  <option>buah</option>
+                  <option>papan</option>
+                  <option>pcs</option>
+                </select>
+                <label for="satuan">Satuan/Timbangan</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="harga" placeholder="Harga" required>
+                <label for="harga">Harga (Rp)</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="stok" placeholder="Stok" required>
+                <label for="stok">Stok</label>
+              </div>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-success w-100 py-3 rounded-pill fw-semibold">Simpan Produk</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER MINIMALIS -->
+<footer class="footer-glass text-center py-4">
+  <div class="container">
+    <p class="mb-0">© 2026 BeVegan • Fresh Vegetables and Fruits • Be Healthy Be Vegan!</p>
+    <div class="mt-2">
+      <a href="#" class="text-success me-3"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-success me-3"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="text-success"><i class="bi bi-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SCRIPT PREVIEW GAMBAR -->
+<script>
+  const fotoProdukInput = document.getElementById('fotoProduk');
+  const previewContainer = document.getElementById('previewContainer');
+  const previewImage = document.getElementById('previewImage');
+
+  // Preview gambar sebelum upload
+  fotoProdukInput.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    
+    if (file) {
+      // Validasi ukuran file (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        alert('Ukuran file terlalu besar! Maksimal 5MB');
+        this.value = '';
+        previewContainer.style.display = 'none';
+        return;
+      }
+
+      // Validasi tipe file
+      if (!file.type.match('image.*')) {
+        alert('File harus berupa gambar!');
+        this.value = '';
+        previewContainer.style.display = 'none';
+        return;
+      }
+
+      // Tampilkan preview
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        previewImage.src = event.target.result;
+        previewContainer.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Handle form submit
+  document.getElementById('formTambahProduk').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Produk berhasil ditambahkan!');
+    // Reset form
+    this.reset();
+    previewContainer.style.display = 'none';
+  });
+</script>
+</body>
+</html>
