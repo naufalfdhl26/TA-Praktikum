@@ -338,6 +338,148 @@ body {
   animation: fadeInUp 1s ease;
 }
 
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark .glass-nav {
+  background: rgba(30, 30, 30, 0.9);
+  border-bottom-color: rgba(100, 100, 100, 0.3);
+}
+
+body.dark .navbar-brand {
+  color: #66bb6a;
+}
+
+body.dark .nav-link {
+  color: #b0b0b0 !important;
+}
+
+body.dark .nav-link.active,
+body.dark .nav-link:hover {
+  color: #66bb6a !important;
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #1b5e20 0%, #388e3c 100%);
+}
+
+body.dark .card-glass {
+  background: rgba(50, 50, 50, 0.7);
+  border-color: rgba(100, 100, 100, 0.3);
+}
+
+body.dark .card-produk {
+  background: rgba(50, 50, 50, 0.8);
+  border-color: rgba(100, 100, 100, 0.3);
+}
+
+body.dark .card-produk:hover {
+  background: rgba(60, 60, 60, 0.9);
+}
+
+body.dark .bg-success-soft {
+  background-color: rgba(102, 187, 106, 0.3);
+  color: #90ee90;
+}
+
+body.dark .card-form {
+  background: #2a2a2a;
+  border-color: rgba(100, 100, 100, 0.3);
+  color: #e0e0e0;
+}
+
+body.dark .form-floating > .form-control,
+body.dark .form-floating > .form-select {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border-color: rgba(100, 100, 100, 0.3);
+}
+
+body.dark .form-floating > .form-control:focus,
+body.dark .form-floating > .form-select:focus {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border-color: #66bb6a;
+}
+
+body.dark .form-label {
+  color: #e0e0e0;
+}
+
+body.dark .upload-wrapper {
+  background: linear-gradient(135deg, #2a2a2a 0%, rgba(102, 187, 106, 0.1) 100%);
+  border-color: rgba(102, 187, 106, 0.5);
+}
+
+body.dark .footer-glass {
+  background: rgba(30, 30, 30, 0.9);
+  border-top-color: rgba(100, 100, 100, 0.3);
+  color: #b0b0b0;
+}
+
+body.dark .modal-content {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-color: rgba(100, 100, 100, 0.3);
+}
+
+body.dark .modal-body {
+  background-color: #2a2a2a;
+}
+
+body.dark .list-group-item {
+  background-color: #3a3a3a;
+  border-color: rgba(100, 100, 100, 0.3);
+  color: #e0e0e0;
+}
+
+body.dark #darkModeIcon {
+  transition: transform 0.3s;
+}
+
+body.dark #darkModeIcon::before {
+  content: '';
+}
+
+/* Tombol Dark Mode */
+#darkModeToggle {
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+
+#darkModeToggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Tombol Wishlist */
+#wishlistBtn {
+  position: relative;
+  transition: all 0.3s;
+}
+
+#wishlistBtn:hover {
+  transform: scale(1.1);
+}
+
+#wishlistBadge {
+  animation: badgePulse 0.5s ease;
+}
+
+@keyframes badgePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero {
