@@ -1,89 +1,57 @@
-// NRP: 162023046 
-// Nama: Naufal Fadhil Setiawan
-// ISB-310 Sistem Informasi Berbasis Web
+# 🍏 BeVegan - Manajemen Toko Sayur dan Buah
 
-# Sistem Manajemen Toko Sayur dan Buah "BeVegan"
+Project ini adalah **Tugas Akhir 3** untuk mata kuliah ISB - 310 Sistem Informasi Berbasis Web (Praktikum). Merupakan pengembangan lanjutan dari Tugas Akhir 2 (JavaScript & Web Storage), di mana website statis telah diubah menjadi dinamis menggunakan PHP.
 
-## Deskripsi Project
-Project ini merupakan sebuah website sederhana berbasis HTML, CSS, dan Bootstrap yang dibuat untuk memenuhi Tugas Akhir 1 Praktikum pada mata kuliah Sistem Informasi Berbasis Web.
+## Informasi Mahasiswa
+- **Nama:** Naufal Fadhil Setiawan
+- **NRP:** 162023046
+- **Program Studi:** Sistem Informasi
+- **Institut Teknologi Nasional (Itenas) Bandung 2026**
 
-Website ini bertujuan untuk membantu pengelolaan data pada toko sayur dan buah secara sederhana, seperti pencatatan produk, stok, dan penjualan. Sistem ini dirancang dengan tampilan yang user-friendly dan responsif sehingga dapat diakses melalui berbagai perangkat, baik desktop maupun mobile.
+---
 
-Selain itu, ide pembuatan sistem ini juga terinspirasi dari kebutuhan nyata di lingkungan agribisnis, sehingga diharapkan dapat memberikan gambaran implementasi sistem informasi dalam dunia nyata.
+## Fitur dan Spesifikasi Tugas
 
-## Tujuan Pembuatan
-Adapun tujuan dari pembuatan project ini adalah:
-- Memahami struktur dasar HTML5 dalam pembuatan website
-- Mengimplementasikan styling menggunakan CSS eksternal
-- Menggunakan framework Bootstrap untuk mempercepat pengembangan tampilan
-- Membuat layout website yang responsif (mobile-friendly)
-- Menerapkan konsep dasar sistem informasi berbasis web
+Website ini mengimplementasikan sistem autentikasi berbasis *Session* dan *Cookies* dengan rincian fitur sebagai berikut:
 
-## Fitur Utama
-Website ini memiliki beberapa fitur utama, yaitu:
+**1. Sistem Login Menggunakan Session (`login.php`)**
+- Halaman login dengan form *Username* dan *Password*.
+- Validasi login secara *hardcode*.
+- Status login disimpan dengan aman di sisi server menggunakan `$_SESSION`.
+- Otomatis melakukan *redirect* ke halaman utama setelah berhasil login.
 
-### 1. Navbar
-Digunakan sebagai navigasi utama yang menghubungkan antar halaman seperti Home dan Produk.
+**2. Proteksi Halaman (Pembatasan Akses)**
+- Halaman utama (`index.php`) dan halaman produk (`produk.php`) telah "digembok" menggunakan logika pengecekan *Session*.
+- Sistem akan menolak akses pengunjung yang belum login dan langsung melempar kembali ke halaman login.
 
-### 2. Hero Section
-Bagian header yang berisi judul sistem dan deskripsi singkat mengenai fungsi website.
+**3. Fitur Remember Me Menggunakan Cookies**
+- Terdapat *checkbox* "Remember Me" pada halaman login.
+- Menyimpan *cookie* `saved_username` selama 7 hari.
+- **Autofill:** Field username akan otomatis terisi apabila pengguna membuka halaman login kembali dalam masa aktif *cookie*.
 
-### 3. Statistik Data
-Menampilkan informasi berupa card yang berisi:
-- Total produk
-- Jumlah stok
-- Total penjualan
+**4. Fitur Logout (`logout.php`)**
+- Tombol logout terintegrasi pada navigasi atas (*Navbar*).
+- Menghapus sesi secara permanen menggunakan `session_unset()` dan `session_destroy()`.
+- Mengarahkan pengguna kembali ke halaman login secara aman.
 
-### 4. Form Input Data
-Digunakan untuk memasukkan data produk, yang terdiri dari:
-- Nama produk
-- Jenis produk (sayur/buah)
-- Harga
-- Jumlah stok
+**5. Nilai Tambahan (Bonus)**
+- Penanganan *error* saat login gagal tidak lagi menggunakan *alert default* JavaScript.
+- Menggunakan komponen **Alert Dismissible Bootstrap 5** berwarna merah muda (*alert-danger*) yang membuat antarmuka (UI) lebih elegan.
 
-Form ini juga dilengkapi dengan validasi sederhana menggunakan atribut `required`.
+---
 
-### 5. Halaman Produk
-Halaman tambahan yang menampilkan daftar produk dalam bentuk card.
+## Cara Menjalankan Project (Localhost)
 
-### 6. Footer
-Berisi informasi pembuat website.
+1. Pastikan Anda telah menginstal *local server* seperti **XAMPP**, **Laragon**, atau **MAMP**.
+2. *Clone* atau unduh *repository* ini.
+3. Pindahkan folder project ini ke dalam direktori server lokal Anda (contoh: `htdocs` untuk XAMPP atau `www` untuk Laragon).
+4. Nyalakan service **Apache** pada *local server* Anda.
+5. Buka browser dan akses URL: `http://localhost/nama-folder-project-ini`
 
-## Teknologi yang Digunakan
-Dalam pembuatan website ini, digunakan beberapa teknologi berikut:
-- HTML5 → untuk struktur halaman
-- CSS → untuk styling tampilan
-- Bootstrap 5 → untuk layout dan komponen UI
-- Bootstrap Icons → untuk menambahkan ikon
+### 🔑 Kredensial Login
+Untuk mencoba sistem *login*, silakan gunakan akses berikut:
+- **Username:** `admin`
+- **Password:** `vegan123`
 
-## Struktur Folder
-Struktur project disusun dengan rapi sebagai berikut:
-TA-Praktikum/
-│
-├── index.html
-├── produk.html
-├── css/
-│ └── style.css
-└── assets/
-
-## Penjelasan Singkat Kode
-- `index.html` → halaman utama yang berisi navbar, hero, statistik, dan form input
-- `produk.html` → halaman tambahan untuk menampilkan daftar produk
-- `style.css` → file CSS eksternal untuk mengatur tampilan seperti hero section dan efek hover
-
-## Kelebihan Sistem
-- Tampilan sederhana dan mudah dipahami
-- Responsive (bisa diakses di berbagai perangkat)
-- Menggunakan Bootstrap sehingga layout lebih rapi
-- Struktur kode terorganisir dengan baik
-
-## Kekurangan Sistem
-- Belum menggunakan database (data belum tersimpan permanen)
-- Belum ada fitur edit dan delete data
-- Masih bersifat statis (belum menggunakan JavaScript atau backend)
-
-## Kesimpulan
-Website ini merupakan implementasi dasar dari sistem informasi berbasis web yang dapat digunakan sebagai fondasi untuk pengembangan sistem yang lebih kompleks di masa depan. Dengan adanya sistem ini, pengelolaan data pada toko sayur dan buah dapat dilakukan secara lebih terstruktur, meskipun masih dalam bentuk sederhana.
-
-## Penutup
-Demikian project ini dibuat sebagai bentuk pemenuhan tugas praktikum serta latihan dalam memahami pengembangan website berbasis sistem informasi.
+---
+*BeVegan - Fresh Vegetables and Fruits. Be Healthy Be Vegan!* 🥬🍎
