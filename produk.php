@@ -1,3 +1,14 @@
+<?php
+// Mulai session
+session_start();
+
+// Cek apakah user sudah login. Jika belum, tendang balik ke login.php
+if (!isset($_SESSION['is_logged_in'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -31,25 +42,31 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Beranda</a>
+          <a class="nav-link active" href="index.php">Beranda</a> 
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="produk.html">Produk</a>
+          <a class="nav-link" href="produk.php">Produk</a>
         </li>
-        <!-- Dark Mode Toggle -->
         <li class="nav-item">
           <button class="btn btn-link nav-link" id="darkModeToggle">
             <i class="bi bi-moon-stars" id="darkModeIcon"></i>
           </button>
         </li>
-        <!-- Wishlist Button -->
         <li class="nav-item">
           <button class="btn btn-link nav-link position-relative" id="wishlistBtn" data-bs-toggle="modal" data-bs-target="#wishlistModal">
             <i class="bi bi-heart"></i>
             <span class="badge bg-success rounded-pill position-absolute top-0 start-100 translate-middle" id="wishlistBadge" style="font-size: 0.65rem; display: none;">0</span>
           </button>
         </li>
-      </ul>
+        <li class="nav-item d-flex align-items-center ms-lg-3 mt-3 mt-lg-0 border-start ps-lg-3">
+          <span class="me-3 fw-medium text-success d-none d-lg-block">
+            Halo, <?= htmlspecialchars($_SESSION['username']); ?>!
+          </span>
+          <a href="logout.php" class="btn btn-danger btn-sm rounded-pill px-3">
+            <i class="bi bi-box-arrow-right me-1"></i> Keluar
+          </a>
+        </li>
+        </ul>
     </div>
   </div>
 </nav>
